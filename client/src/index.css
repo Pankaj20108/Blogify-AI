@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+/* Dark mode is toggled with a "dark" class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+    font-family: "Outfit", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@theme {
+    --color-primary: black;
+    --color-on-primary: white;
+}
+
+/* In dark mode the primary color flips so buttons and accents stay readable */
+.dark {
+    --color-primary: #f1f1f1;
+    --color-on-primary: #111111;
+    color-scheme: dark;
+}
+
+body {
+    background-color: white;
+    color: #374151;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dark body {
+    background-color: #0f0f10;
+    color: #d4d4d8;
+}
+
+.reset-tw * {
+    all: revert !important;
+}
+
+.reset-tw strong {
+    font-weight: 600 !important;
+}
+
+/* Quill editor in dark mode */
+.dark .ql-toolbar.ql-snow,
+.dark .ql-container.ql-snow {
+    border-color: #3f3f46;
+}
+
+.dark .ql-snow .ql-stroke {
+    stroke: #d4d4d8;
+}
+
+.dark .ql-snow .ql-fill {
+    fill: #d4d4d8;
+}
+
+.dark .ql-snow .ql-picker,
+.dark .ql-editor {
+    color: #e4e4e7;
+}
+
+.dark .ql-snow .ql-picker-options {
+    background-color: #18181b;
+}
+
+.dark .ql-editor.ql-blank::before {
+    color: #71717a;
+}
