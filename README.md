@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Blogify AI
 
 A simple full-stack blogging app (college demo). Anyone can write a blog, let **Gemini AI** draft the title, subtitle and description, edit it, and publish it. No login required.
@@ -122,3 +123,6 @@ Limits are per IP and can be changed in `server/middleware/rateLimit.js`.
 - **Sanitization:** title/subtitle/topic are stripped of all HTML; descriptions keep only Quill formatting tags (no scripts, event handlers, images or `javascript:` links). AI output is sanitized the same way.
 - **Uploads:** JPG/PNG/WEBP/GIF only, max 4 MB (Vercel request limit); temp files are deleted after the Cloudinary upload.
 - Publishing is intentionally public (no accounts). Each new blog gets a random owner key that is returned once and saved in the publisher's browser (localStorage); the database stores only its SHA-256 hash. Edit and delete require that key. If browser data is cleared, the key is lost and the blog can only be removed from MongoDB Atlas.
+=======
+# Blogify-AI
+>>>>>>> 3481b90060efed1a3f87ec7f4ea44fc7b9a2532a
